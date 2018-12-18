@@ -1,0 +1,3 @@
+<TextureAtlas imagePath="sprites.png">
+	<SubTexture name="Santa - Sprite Sheet.png" x="0" y="0" width="864" height="2077"/>
+</TextureAtlas>
