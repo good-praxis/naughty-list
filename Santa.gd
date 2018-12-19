@@ -24,4 +24,4 @@ func _on_Sprite_frame_changed():
 	var current_sprite_size = $Sprite.frames.get_frame(current_loop, current_index).get_size()
 	
 	$Sprite.offset = (current_sprite_size - standard_sprite_size) * sprite_offset_direction
-	print($Sprite.offset)
+
