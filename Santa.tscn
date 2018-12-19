@@ -55,20 +55,20 @@
 [ext_resource path="res://sprites/santa/damage_taken/1.png" type="Texture" id=53]
 [ext_resource path="res://sprites/santa/damage_taken/2.png" type="Texture" id=54]
 [ext_resource path="res://sprites/santa/damage_taken/3.png" type="Texture" id=55]
-[ext_resource path="res://sprites/santa/walk/0.png" type="Texture" id=56]
-[ext_resource path="res://sprites/santa/walk/1.png" type="Texture" id=57]
-[ext_resource path="res://sprites/santa/walk/2.png" type="Texture" id=58]
-[ext_resource path="res://sprites/santa/walk/3.png" type="Texture" id=59]
-[ext_resource path="res://sprites/santa/walk/4.png" type="Texture" id=60]
-[ext_resource path="res://sprites/santa/walk/5.png" type="Texture" id=61]
-[ext_resource path="res://sprites/santa/walk/6.png" type="Texture" id=62]
-[ext_resource path="res://sprites/santa/walk/7.png" type="Texture" id=63]
-[ext_resource path="res://sprites/santa/jump/0.png" type="Texture" id=64]
-[ext_resource path="res://sprites/santa/jump/1.png" type="Texture" id=65]
-[ext_resource path="res://sprites/santa/jump/2.png" type="Texture" id=66]
-[ext_resource path="res://sprites/santa/jump/3.png" type="Texture" id=67]
-[ext_resource path="res://sprites/santa/jump/4.png" type="Texture" id=68]
-[ext_resource path="res://sprites/santa/jump/5.png" type="Texture" id=69]
+[ext_resource path="res://sprites/santa/jump/0.png" type="Texture" id=56]
+[ext_resource path="res://sprites/santa/jump/1.png" type="Texture" id=57]
+[ext_resource path="res://sprites/santa/jump/2.png" type="Texture" id=58]
+[ext_resource path="res://sprites/santa/jump/3.png" type="Texture" id=59]
+[ext_resource path="res://sprites/santa/jump/4.png" type="Texture" id=60]
+[ext_resource path="res://sprites/santa/jump/5.png" type="Texture" id=61]
+[ext_resource path="res://sprites/santa/walk/0.png" type="Texture" id=62]
+[ext_resource path="res://sprites/santa/walk/1.png" type="Texture" id=63]
+[ext_resource path="res://sprites/santa/walk/2.png" type="Texture" id=64]
+[ext_resource path="res://sprites/santa/walk/3.png" type="Texture" id=65]
+[ext_resource path="res://sprites/santa/walk/4.png" type="Texture" id=66]
+[ext_resource path="res://sprites/santa/walk/5.png" type="Texture" id=67]
+[ext_resource path="res://sprites/santa/walk/6.png" type="Texture" id=68]
+[ext_resource path="res://sprites/santa/walk/7.png" type="Texture" id=69]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -76,7 +76,7 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
@@ -116,22 +116,22 @@ animations = [ {
 "frames": [ ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ) ],
 "loop": true,
 "name": "damage_taken",
-"speed": 5.0
+"speed": 2.0
 }, {
-"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ) ],
-"loop": true,
-"name": "walk",
-"speed": 6.0
-}, {
-"frames": [ ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ) ],
+"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ) ],
 "loop": true,
 "name": "jump",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ) ],
+"loop": true,
+"name": "walk",
+"speed": 6.0
 } ]
 
 [node name="Santa" type="Area2D" index="0"]
 
-position = Vector2( 190, 140 )
+position = Vector2( 161.723, 161.327 )
 scale = Vector2( 5, 5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -143,14 +143,15 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
-"_edit_group_": true
+"_edit_vertical_guides_": [ 159.904 ]
 }
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
+position = Vector2( -12.5229, 0 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 1
+frame = 4
 playing = true
 centered = false
 

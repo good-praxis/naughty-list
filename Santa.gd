@@ -1,27 +1,22 @@
 extends Area2D
 
-var standard_sprite_size
-var sprite_offset_direction
 var walking = false
 var prev_anim
 
 func _ready():
 	# Connecting here to prevent debug errors in the editor
 	$Sprite.connect("frame_changed", self, "_on_Sprite_frame_changed")
-	standard_sprite_size = $Sprite.frames.get_frame('idle', 0).get_size()
-	
-	# This means it'll push up and right when the sprite is growing
-	sprite_offset_direction = Vector2(1, -1)
-	
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_right"):
 		$Sprite.flip_h = false
+		switch_sprite_offset($Sprite.animation)
 		
 	
 	if Input.is_action_just_pressed("ui_left"):
 		$Sprite.flip_h = true
-	pass
+		switch_sprite_offset($Sprite.animation)
+	
 
 
 func _on_Sprite_frame_changed():
@@ -42,13 +37,13 @@ func sprite_idle_offset(idle):
 		[3, false], [4, false]:
 			$Sprite.offset = Vector2(0, 1)
 		[4, true]:
-			$Sprite.offset = Vector2(-1, 1)
+			$Sprite.offset = Vector2(-2, 1)
 		[3, true]:
-			$Sprite.offset = Vector2(-1, 1)
+			$Sprite.offset = Vector2(-3, 1)
 		[_, false]:
 			$Sprite.offset = Vector2(0, 0)
 		[_, true]:
-			$Sprite.offset = Vector2(-1, 0)
+			$Sprite.offset = Vector2(-3, 0)
 	
 
 func sprite_walk_offset(walk):
