@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Santa - Sprite Sheet_06.png-7183322354b3fa1a05f7b3a92074c9e2.stex"
+path="res://.import/0.png-e1a63424f49137120f7fb9fb85ee8f9f.stex"
 
 [deps]
 
-source_file="res://sprites/gift/Santa - Sprite Sheet_06.png"
-dest_files=[ "res://.import/Santa - Sprite Sheet_06.png-7183322354b3fa1a05f7b3a92074c9e2.stex" ]
+source_file="res://sprites/gift/0.png"
+dest_files=[ "res://.import/0.png-e1a63424f49137120f7fb9fb85ee8f9f.stex" ]
 
 [params]
 
